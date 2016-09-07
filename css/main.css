@@ -2213,7 +2213,11 @@ header {
       color: white;
       line-height: 40px;
       font-size: 20px;
-      margin-right: 20px; }
+      margin-right: 20px;
+      border: none;
+      text-decoration: none; }
+      header li a.fa:hover, header li a.fa:active {
+        color: #aaa; }
 
 section {
   max-width: 830px;
