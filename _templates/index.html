@@ -33,7 +33,7 @@
     <section id="section-tech">
       <h3>How I do it</h3>
       <ul>
-        <% technologies.forEach(t => {%>
+        <% technologies.forEach(t => { %>
           <li>
             <span class="label"><%= t.label %></span>
             <span class="base" title="<%= t.level %>">
@@ -46,6 +46,14 @@
     <section id="section-clients">
       <h3>Who I have helped</h3>
       <ul><% clients.forEach(c => {%> <li><%= c %></li> <% }) %></ul>
+    </section>
+    <section id="section-certs">
+      <h3>What I have earned</h3>
+      <ul>
+        <% certifications.forEach(c => { %>
+          <li><%= c %></li>
+        <% }) %>
+      </ul>
     </section>
     <section id="section-contact">
       <h3>How to <span>get in touch</span></h3>
