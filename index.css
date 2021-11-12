@@ -17,17 +17,17 @@ html, body {
 }
 
 body, section {
-  padding: 2.5rem 4rem 0;
+  padding: 3rem 4rem 0;
 }
 
 @media (max-width: 767px) {
   body {
-    padding: 1.5rem 1rem 0;
+    padding: 3rem 1rem 0;
   }
 }
 @media (max-width: 479px) {
   section {
-    padding: 1.5rem 0.5rem 0;
+    padding: 1rem 0.5rem 0;
   }
 }
 html {
@@ -48,6 +48,11 @@ header nav {
   font-size: 90%;
   padding: 0 1.5rem;
   line-height: 3.5rem;
+}
+@media (max-width: 479px) {
+  header nav .external {
+    display: none;
+  }
 }
 header nav a {
   color: #fff;
