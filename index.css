@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital@0;1&family=Exo:ital,wght@0,300;0,400;1,400&display=swap");
+.boxes, .bundle-boxes > div, .edition-boxes > div {
+  border: 1px solid #000;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+.boxes h4, .bundle-boxes > div h4, .edition-boxes > div h4 {
+  margin: 0;
+  padding: 0.3rem 0 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+}
+
+body, section {
+  padding: 2.5rem 4rem 0;
+}
+
+html {
+  background: radial-gradient(ellipse at 10% 90%, rgba(51, 153, 255, 0.6), transparent 40%), radial-gradient(ellipse at 20% 100%, rgba(0, 102, 255, 0.6), transparent 20%), radial-gradient(ellipse at 90% 10%, rgba(51, 153, 255, 0.6), transparent 40%), radial-gradient(ellipse at 100% 20%, rgba(0, 102, 255, 0.6), transparent 20%);
+  background-attachment: fixed;
+}
+
+header {
+  background-color: #000;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+header nav {
+  text-transform: uppercase;
+  font-size: 90%;
+  padding: 0 1.5rem;
+  line-height: 3.5rem;
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.75rem;
+}
+header nav a.icon {
+  margin: 0 0.5rem;
+  font-size: 120%;
+}
+
+h1, h2, h3 {
+  font-family: Exo, sans-serif;
+  text-align: center;
+}
+
+h4, h5 {
+  font-family: Exo, sans-serif;
+}
+
+h1 {
+  font-size: 250%;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-weight: 300;
+  margin: 0;
+  padding-top: 1rem;
+}
+
+main {
+  padding: 0 1rem 1.5rem;
+  line-height: 1.3;
+  margin: 5rem auto;
+  max-width: 80rem;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid #f0f0f0;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.6rem 0rem rgba(0, 0, 0, 0.2);
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+#solutions, #contact {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.edition-boxes {
+  display: flex;
+}
+.edition-boxes > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.edition-boxes > div h4 {
+  text-align: center;
+}
+.edition-boxes > div > div {
+  flex: 1;
+}
+.edition-boxes > div > div li {
+  margin-bottom: 0.2rem;
+}
+.edition-boxes > div > a {
+  color: inherit;
+  flex: 0;
+  margin: 0 auto;
+  border: 1px solid #06f;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  box-shadow: 0 0 4px 2px #39f inset;
+}
+
+.bundle-boxes > div {
+  display: flex;
+  align-items: center;
+}
+.bundle-boxes > div > div:first-child {
+  flex: 0 0 6rem;
+}
+.bundle-boxes > div > div:last-child {
+  flex: 1;
+}
+
+#contact a {
+  line-height: 1.5;
+  color: inherit;
+}
+#contact a i {
+  margin-right: 0.3rem;
+}
+
+.img-hdr {
+  margin: 0 auto;
+  display: block;
+}
+.img-hdr.software {
+  width: 50%;
+}
+.img-hdr.cloud {
+  width: 70%;
+}
+.img-hdr.security {
+  margin-top: 2rem;
+  margin-right: 0rem;
+}
+.img-hdr.leadership {
+  margin-top: 2rem;
+  margin-right: 0.5rem;
+}
+
+/*# sourceMappingURL=index.css.map */
