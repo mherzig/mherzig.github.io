@@ -8,7 +8,7 @@
   --color-xtra-dark: #1C4D3F;
 }
 
-html, body { min-height: 100%; }
+html, body { min-height: 100%; min-height: 100svh; }
 
 body {
   background: #525675 linear-gradient(var(--color-light), var(--color-medium));
@@ -25,6 +25,14 @@ main {
   border-radius: 16px;
   box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.07);
   width: 1024px;
+
+  @media (max-width: 1024px) {
+    margin: 0;
+    width: 100%;
+    background-position-y: -200px;
+    border-radius: 0;
+    border: none;
+  }
 }
 
 h1, h2 {
@@ -69,28 +77,73 @@ a {
 
 #container {
   display: flex;
-  margin: 320px 0 2rem;
+  padding: 320px 0 2rem;
 
   & > aside {
-    flex: 1 1 20%;
+    flex: 0 1 20%;
     margin: 220px 0 0;
     padding: 0 25px;
+    text-align: center;
 
     &:first-of-type {
       border-right: 1px solid;
       border-image: linear-gradient(180deg,  #fff 20%, var(--color-medium) 50%, var(--color-medium) 70%, #fff) 1 / 0 1px 0 0;
+      order: 1;
+
+      @media (max-width: 700px) {
+        order: 2;
+      }
     }
+
     &:last-of-type {
       border-left: 1px solid;
       border-image: linear-gradient(180deg,  #fff 20%, var(--color-medium) 50%, var(--color-medium) 70%, #fff) 1 / 0 0 0 1px;
+      order: 3;
+
+      @media (max-width: 1024px) {
+        margin-top: -8rem;
+        border-left: none;
+        border-right: 1px solid;
+        border-image: linear-gradient(180deg,  #fff 20%, var(--color-medium) 50%, var(--color-medium) 70%, #fff) 1 / 0 1px 0 0;
+      }
+
+      @media (max-width: 700px) {
+        margin-top: 0;
+      }
     }
+
+    @media (max-width: 700px) {
+      margin-top: 0;
+      flex-basis: 0;
+      flex: 1;  
+    }
+  }
+
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+    padding-top: 120px;
+  }
+
+  @media (max-width: 700px) {
+    padding-top: 80px;
+  }
+
+  @media (max-width: 500px) {
+    padding-top: 170px;
   }
 }
 
 #bio {
   flex: 1 1 60%;
   text-align: center;
-  padding: 0 25px;  
+  padding: 0 25px;
+  order: 2;
+
+  @media (max-width: 700px) {
+    order: 1;
+    flex-basis: 100%;
+    margin-bottom: 5rem;
+  }
 }
 
 #portrait {
@@ -172,12 +225,13 @@ nav {
   mask: url(assets/email.svg) no-repeat center;
 }
 
-#links {
-  text-align: center;
-}
-
 #skills {
   ul {
+    margin-top: 0.5em;
     font-size: 80%;
+  }
+
+  & > div {
+    text-align: left;
   }
 }
