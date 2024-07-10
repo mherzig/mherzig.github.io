@@ -1,0 +1,183 @@
+@import url(https://fonts.googleapis.com/css2?family=Bevan&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Recursive:wght@400..800&display=swap);
+
+:root {
+  --color-light: #E1F4EF;
+  --color-medium: #D0EEE6;
+  --color-dark: #30836D;
+  --color-xtra-dark: #1C4D3F;
+}
+
+html, body { min-height: 100%; }
+
+body {
+  background: #525675 linear-gradient(var(--color-light), var(--color-medium));
+  color: var(--color-dark);
+  font-family: 'Recursive', Courier, monospace;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+main {
+  margin: 30px auto;
+  border: 2px solid var(--color-medium);
+  background: #fff url(assets/header-2x.jpg) top center no-repeat;
+  border-radius: 16px;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.07);
+  width: 1024px;
+}
+
+h1, h2 {
+  color: var(--color-xtra-dark);
+  font-size: 220%;
+  font-family: 'Bevan', serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  margin: 0 0 1rem;
+  padding: 0;
+  border-bottom: 1px solid;
+  display: inline-block;
+  border-image: linear-gradient(90deg,  #fff, var(--color-dark) 30%, var(--color-dark) 70%, #fff) 1 / 0 0 1px 0 / 0 50px 3px 50px;
+}
+
+h2 {
+  font-size: 150%;
+  border-image-outset: 0 30px 3px 30px;
+}
+
+h3 {
+  color: var(--color-xtra-dark);
+  font-size: 125%;
+  line-height: 1;
+  margin: 1rem 0 0.5rem 1rem;
+  text-indent: -1rem;
+}
+
+p {
+  text-align: left;
+  margin: 1rem 0;
+}
+
+a {
+  color: var(--color-xtra-dark);
+
+  &:hover, &:active {
+    color: var(--color-dark);
+  }
+}
+
+#container {
+  display: flex;
+  margin: 320px 0 2rem;
+
+  & > aside {
+    flex: 1 1 20%;
+    margin: 220px 0 0;
+    padding: 0 25px;
+
+    &:first-of-type {
+      border-right: 1px solid;
+      border-image: linear-gradient(180deg,  #fff 20%, var(--color-medium) 50%, var(--color-medium) 70%, #fff) 1 / 0 1px 0 0;
+    }
+    &:last-of-type {
+      border-left: 1px solid;
+      border-image: linear-gradient(180deg,  #fff 20%, var(--color-medium) 50%, var(--color-medium) 70%, #fff) 1 / 0 0 0 1px;
+    }
+  }
+}
+
+#bio {
+  flex: 1 1 60%;
+  text-align: center;
+  padding: 0 25px;  
+}
+
+#portrait {
+  width: 60%;
+}
+
+#projects {
+  text-align: left;
+  margin: 2rem 0;
+
+  h2 {
+    display: block;
+  }
+
+  ul {
+    margin-top: 0;
+    font-size: 80%;
+  }
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  img {
+    display: block;
+    width: 3rem;
+    margin: 1.2rem auto 0.2rem;
+  }
+
+  a {    
+    text-decoration: none;
+
+    & > div {
+      width: 3rem;
+      height: 3rem;
+      margin: 1rem auto 0.2rem;
+      position: relative;
+      transition: background 0.5s ease-out;
+
+      &::before {
+        content: ' ';
+        width: 100%;
+        height: 200%;
+        background: linear-gradient(0deg, var(--color-dark) 0%, var(--color-dark) 50%, var(--color-xtra-dark) 50%, var(--color-xtra-dark) 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform 0.5s;
+      }
+    }
+
+    &:hover, &:active {
+      text-decoration: underline;
+
+      & > div::before {
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+#linkedin {
+  mask: url(assets/linkedin.svg) no-repeat center;
+}
+
+#stackoverflow {
+  mask: url(assets/stackoverflow.svg) no-repeat center;
+}
+
+#github {
+  mask: url(assets/github.svg) no-repeat center;
+}
+
+#email {
+  mask: url(assets/email.svg) no-repeat center;
+}
+
+#links {
+  text-align: center;
+}
+
+#skills {
+  ul {
+    font-size: 80%;
+  }
+}
